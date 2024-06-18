@@ -31,7 +31,6 @@ public class Item {
     private String name;
     private String valor;
     private Boolean isPrimary;
-
     @CreationTimestamp
     private OffsetDateTime createdAt;
 
@@ -40,4 +39,5 @@ public class Item {
 
     @Where(clause = "deleted_at IS NULL")
     private OffsetDateTime deletedAt;
+
 }
