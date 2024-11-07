@@ -23,7 +23,7 @@ import lombok.AllArgsConstructor;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping("/people")
+@RequestMapping("/person")
 public class PersonController {
 
     private PersonAssembler personAssembler;

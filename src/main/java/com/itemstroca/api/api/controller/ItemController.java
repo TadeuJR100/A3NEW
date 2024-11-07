@@ -18,11 +18,6 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-
-
-
-
-
 @RestController
 @AllArgsConstructor
 @RequestMapping("/Item")
@@ -42,8 +37,8 @@ public class ItemController {
     }
     
     @GetMapping("/{personId}")
-    public List<ItemOutDTO> getMethodName(@PathVariable final @NotNull Long personID) {
-        return itemAssembler.toCollectionDto(itemService.mainItem(personID));
+    public List<ItemOutDTO> getMethodName(@PathVariable final @NotNull Long personId) {
+        return itemAssembler.toCollectionDto(itemService.mainItem(personId));
     }
     
     @DeleteMapping("/{itemId}")

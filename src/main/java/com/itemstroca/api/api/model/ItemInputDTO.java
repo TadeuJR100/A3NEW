@@ -13,7 +13,9 @@ import lombok.Setter;
 public class ItemInputDTO {
     private static final int SIZE_MIN_NAME = 4; 
     private static final int SIZE_MAX_NAME = 255;
-
+    private static final int SIZE_MIN_VALOR = 1;
+    private static final int SIZE_MAX_VALOR = 1000;
+    
     @Valid
     @NotNull
     private PersonBaseDTO person;
@@ -21,6 +23,10 @@ public class ItemInputDTO {
     @NotBlank
     @Size(min = SIZE_MIN_NAME, max = SIZE_MAX_NAME)
     private String name;
+
+    @NotBlank
+    @Size(min = SIZE_MIN_VALOR, max = SIZE_MAX_VALOR)
+    private String valor;
 
     @NotNull
     @AssertTrue

@@ -27,6 +27,7 @@ public class Users {
     private long id;
 
     @ManyToOne
+    private Person person;
     private String username;
     private String password;
     private Boolean isPrimary;
